@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moi_movies/pages/home_page.dart';
 
     void main() {
       runApp(MyApp());
@@ -10,11 +11,7 @@ import 'package:flutter/material.dart';
       @override
       Widget build(BuildContext context) {
         return MaterialApp(
-          home: Material(
-            child: Container(
-            child: Text("Welcome to the next generation of Bingeing!"),
-          ),
-        ),
+          home: HomePage(),
         );
       }
     }
