@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       body: Material(
         child: Center(
           child: Container(
-            child: Text("Welcome to the next generation of Binging!"),
+            child: Text("Welcome to the next generation of Bingiing!"),
           ),
         ),
       ),
