@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:moi_movies/pages/home_page.dart';
 import 'package:moi_movies/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moi_movies/utils/routes.dart';
 
     void main() {
       runApp(MyApp());
@@ -22,10 +23,11 @@ import 'package:google_fonts/google_fonts.dart';
           darkTheme: ThemeData(
             brightness: Brightness.dark,
           ),
-          initialRoute: "/",
+          debugShowCheckedModeBanner: false,
+          initialRoute: MyRoutes.loginRoute,
           routes: {
-          "/" : (context) => LoginPage(),
-          "/home" : (context) => HomePage(),
+          MyRoutes.homeRoute : (context) => HomePage(),
+          MyRoutes.loginRoute : (context) => LoginPage(),
           },
         );
       }

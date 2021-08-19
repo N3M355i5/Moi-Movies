@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moi_movies/utils/routes.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -8,6 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Material(
+        child:SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
@@ -25,6 +27,12 @@ class LoginPage extends StatelessWidget {
                   ),
               child: Column(
                 children: [
+                  Text("Welcome Back!",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                   TextFormField(
                     decoration: InputDecoration(
                         hintText: "Enter Username",
@@ -39,13 +47,18 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 40,
                   ),
                   ElevatedButton(
-                    child: Text("LOGIN"),
-                    style: TextButton.styleFrom(),
+                    child: Text("LOGIN", style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                    )),
+                    style: TextButton.styleFrom(
+                      minimumSize: Size(150, 40),
+                      backgroundColor: Colors.blue,
+                    ),
                     onPressed: () {
-                      print("User Login Tried");
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
                     },
                   ),
                 ],
@@ -55,6 +68,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       ),
+    ),
     );
   }
 }

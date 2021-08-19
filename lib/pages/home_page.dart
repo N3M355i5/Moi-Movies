@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moi_movies/utils/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,9 +13,16 @@ class HomePage extends StatelessWidget {
       body: Material(
         child: Center(
           child: Container(
-            child: Text("Welcome to the next generation of Bingiing!"),
+            child: Column(children: [
+              Text("Welcome to the next generation of Bingiing!"),
+              ElevatedButton(child: Text("Go Back SIMON!"),
+                onPressed: () {
+                  Navigator.pushNamed(context, MyRoutes.loginRoute);
+                }
+                )
+            ],)
+            )
           ),
-        ),
       ),
       drawer: Drawer(),
     );
