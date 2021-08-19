@@ -15,10 +15,11 @@ class HomePage extends StatelessWidget {
           child: Container(
             child: Column(children: [
               Text("Welcome to the next generation of Bingiing!"),
-              ElevatedButton(child: Text("Go Back SIMON!"),
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.loginRoute);
-                }
+              ElevatedButton(
+                  child: Text("Go Back SIMON!"),
+                  onPressed: () {
+                    Navigator.pushNamed(context, MyRoutes.loginRoute);
+                  }
                 )
             ],)
             )
